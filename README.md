@@ -10,4 +10,13 @@ International Conference on Medical Image Computing and Computer Assisted Interv
 
 ## Usage
 
+### How to Run
+1. Run `python train.py` to train the UNet for the segmentation of the CCA, thyroid, trachea.
+2. Run `python infer.py` to obtain the coarse localization results of the RLN.
+3. Run `python statistic_test.py` and `python prior_localize.py` to obtain the results of the Bayesian alignment.
+4. Run `python refine_train.py` to train the multi-scale locator for the localization of RLN.
+5. Run `python refine infer.py` to obtain the final localization results of RLN.
+
+## Results
+
 
