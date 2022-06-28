@@ -18,5 +18,10 @@ International Conference on Medical Image Computing and Computer Assisted Interv
 5. Run `python refine infer.py` to obtain the final localization results of RLN.
 
 ## Results
+![Results](Result_h.png)
 
-
+## Citation
+If this work is helpful for you, please cite our paper as follows:
+```
+TBD
+```
