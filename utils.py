@@ -159,15 +159,21 @@ def procrustes_analysis(reference_mask, mask):
 
     transform = transforms.TranslationTransform2D()
     params0 = None
-    starting_affine = c_of_mass.affine
     translation = affine_reg.optimize(reference_mask, mask, transform, params0, identity, identity,
-                                      starting_affine=starting_affine)
+                                      starting_affine=c_of_mass.affine)
 
-    # transformed_img = translation.transform(img, interpolation='linear')
-    transformed_mask = translation.transform(mask, interpolation='nearest')
+    transform = transforms.RigidTransform2D()
+    rigid = affine_reg.optimize(reference_mask, mask, transform, params0, identity, identity, starting_affine=translation.affine)
+
+
+    # transformed_img = rigid.transform(img, interpolation='linear')
+    transformed_mask = rigid.transform(mask, interpolation='nearest')
     transformed_mask = transformed_mask / 50
     transformed_mask = transformed_mask.astype(np.int32)
     transformed_mask *= 50
 
     print(set(list(transformed_mask.reshape(-1))))
-    return transformed_mask
+    return
+
+
+
