@@ -23,5 +23,10 @@ International Conference on Medical Image Computing and Computer Assisted Interv
 ## Citation
 If this work is helpful for you, please cite our paper as follows:
 ```
-TBD
+@article{dou2022localizing,
+  title={Localizing the Recurrent Laryngeal Nerve via Ultrasound with a Bayesian Shape Framework},
+  author={Dou, Haoran and Han, Luyi and He, Yushuang and Xu, Jun and Ravikumar, Nishant and Mann, Ritse and Frangi, Alejandro F and Yap, Pew-Thian and Huang, Yunzhi},
+  journal={arXiv preprint arXiv:2206.15254},
+  year={2022}
+}
 ```
